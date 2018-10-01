@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Assignment_2
 {
@@ -24,16 +24,21 @@ namespace Assignment_2
             client1.StockList.AddStock(stockNine); //GOOG
 
             Console.WriteLine("**************************Client-1 Portfolio*****************************************");
-            client1.StockList.Print();// Good +
-            Console.WriteLine("Number of shares :" + client1.StockList.Length());// good +
-            Console.WriteLine("Current value of portfolio for client 1 :" + client1.GetPortfolioValue()); // short 1 value
+            Console.WriteLine("");
+            client1.StockList.Print();
+            Console.WriteLine("");
+            Console.WriteLine("Number of shares :" + client1.StockList.Length());
+            Console.WriteLine("Current value of portfolio for client 1 :" + client1.GetPortfolioValue());
             Console.WriteLine("Stock with most shares for client 1:" + client1.StockList.MostShares());
-            client1.StockList.SortByValue();//good
+            Console.WriteLine("");
+            client1.StockList.SortByValue();
+            Console.WriteLine("");
             Console.WriteLine("Portfolio sorted in descending order by number of holdings for client 1:");//good
-            client1.StockList.Print();//good
+            client1.StockList.Print();
 
-
+            Console.WriteLine("");
             Console.WriteLine("**************************Client-2 Portfolio*****************************************");
+            Console.WriteLine("");
             ClientPortfolio client2 = new ClientPortfolio("Chris", "New York", "435-111-000");
             client2.StockList.AddStock(stockFive); // Z
             client2.StockList.AddStock(stockSix); //B
@@ -41,20 +46,23 @@ namespace Assignment_2
             client2.StockList.AddStock(stockEight); //AAPL
 
             client2.StockList.Print();//good
+            Console.WriteLine("");
             Console.WriteLine("Number of shares :" + client2.StockList.Length());// good
             Console.WriteLine("Current value of portfolio for client 2 :" + client2.GetPortfolioValue());
             Console.WriteLine("Stock with most shares for client 2 :" + client2.StockList.MostShares());
+            Console.WriteLine("");
             client2.StockList.SortByValue();
             Console.WriteLine("Portfolio sorted in descending order by number of holdings for client 2:");
             client2.StockList.Print();
+            Console.WriteLine("");
             client2.StockList.SortByName();
             Console.WriteLine("Portfolio sorted in alphabetical order for client 2:");
             client2.StockList.Print();
-            Console.WriteLine();
-
+            Console.WriteLine("");
             Console.WriteLine("Similarity Index for Client-1 and Client-2 :" + client1.StockList.Similarity(client2.StockList));
-
+            Console.WriteLine("");
             Console.WriteLine("**************************Client-1,Client -2 Merged Portfolio*****************************************");
+            Console.WriteLine("");
             StockList mergedPortfolio = client1.StockList.MergeList(client2.StockList);
             mergedPortfolio.Print();
 
